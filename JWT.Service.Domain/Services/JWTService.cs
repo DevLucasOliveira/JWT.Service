@@ -3,11 +3,18 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace jwt.service
+namespace JWT.Service.Domain.Services
 {
     public class JWTService
     {
-        public static void Authenticate(string secret, IServiceCollection services)
+        public static void Authentication(
+            IServiceCollection services, 
+            string secret, 
+            bool requireHttpsMetadata = false, 
+            bool saveToken = true, 
+            bool validateIssuerSigningKey = true,
+            bool ValidateIssuer = false, 
+            bool validateAudience = false)
         {
             var key = Encoding.ASCII.GetBytes(secret);
             services.AddAuthentication(x =>
@@ -17,14 +24,14 @@ namespace jwt.service
             })
                  .AddJwtBearer(x =>
                  {
-                     x.RequireHttpsMetadata = false;
-                     x.SaveToken = true;
+                     x.RequireHttpsMetadata = requireHttpsMetadata;
+                     x.SaveToken = saveToken;
                      x.TokenValidationParameters = new TokenValidationParameters
                      {
-                         ValidateIssuerSigningKey = true,
+                         ValidateIssuerSigningKey = validateIssuerSigningKey,
                          IssuerSigningKey = new SymmetricSecurityKey(key),
-                         ValidateIssuer = false,
-                         ValidateAudience = false
+                         ValidateIssuer = ValidateIssuer,
+                         ValidateAudience = validateAudience
                      };
                  });
         }

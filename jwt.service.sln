@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jwt.service", "jwt.service.csproj", "{A9D04ABA-958F-4EA5-8D8E-AEC7458D0160}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3589F2DC-94A9-47D7-B998-EB7542A51322}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{C0F496AC-E638-4E11-8347-4FC6D9F56D92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWT.Service.Domain", "JWT.Service.Domain\JWT.Service.Domain.csproj", "{486F81F6-EC6D-469B-8178-744294A7BDE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWT.Service.Tests", "JWT.Service.Tests\JWT.Service.Tests.csproj", "{29CEE126-55D1-447E-8F29-6D9DD542083B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +17,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A9D04ABA-958F-4EA5-8D8E-AEC7458D0160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9D04ABA-958F-4EA5-8D8E-AEC7458D0160}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9D04ABA-958F-4EA5-8D8E-AEC7458D0160}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9D04ABA-958F-4EA5-8D8E-AEC7458D0160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{486F81F6-EC6D-469B-8178-744294A7BDE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{486F81F6-EC6D-469B-8178-744294A7BDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{486F81F6-EC6D-469B-8178-744294A7BDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{486F81F6-EC6D-469B-8178-744294A7BDE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29CEE126-55D1-447E-8F29-6D9DD542083B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29CEE126-55D1-447E-8F29-6D9DD542083B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29CEE126-55D1-447E-8F29-6D9DD542083B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29CEE126-55D1-447E-8F29-6D9DD542083B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{486F81F6-EC6D-469B-8178-744294A7BDE5} = {C0F496AC-E638-4E11-8347-4FC6D9F56D92}
+		{29CEE126-55D1-447E-8F29-6D9DD542083B} = {3589F2DC-94A9-47D7-B998-EB7542A51322}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {500F21F0-D69F-4478-A12B-0C4736C433AB}
