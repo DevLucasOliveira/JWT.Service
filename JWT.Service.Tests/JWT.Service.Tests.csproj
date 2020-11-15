@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JWT.Service.Domain\JWT.Service.Domain.csproj" />
+    <ProjectReference Include="..\JWT.Service\JWT.Service.csproj" />
   </ItemGroup>
 
 </Project>

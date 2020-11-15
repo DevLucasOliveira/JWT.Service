@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3589F2DC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{C0F496AC-E638-4E11-8347-4FC6D9F56D92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWT.Service.Domain", "JWT.Service.Domain\JWT.Service.Domain.csproj", "{486F81F6-EC6D-469B-8178-744294A7BDE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWT.Service", "JWT.Service\JWT.Service.csproj", "{486F81F6-EC6D-469B-8178-744294A7BDE5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWT.Service.Tests", "JWT.Service.Tests\JWT.Service.Tests.csproj", "{29CEE126-55D1-447E-8F29-6D9DD542083B}"
 EndProject

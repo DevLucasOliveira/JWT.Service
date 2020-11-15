@@ -1,8 +1,7 @@
-﻿using JWT.Service.Domain.Token;
-using System;
+﻿using System;
 using Xunit;
 
-namespace JWT.Service.Tests.Token
+namespace JWT.Service.Tests
 {
     public class TokenServiceTests
     {
