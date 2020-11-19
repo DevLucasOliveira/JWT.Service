@@ -8,6 +8,7 @@ namespace JWT.Service
 {
     public class TokenService
     {
+        private const string TYPE = "user_id";
         public static string GenerateToken(string userId, string secret, double expiredToken)
         {
             try
@@ -18,7 +19,7 @@ namespace JWT.Service
                 {
                     Subject = new ClaimsIdentity(new Claim[]
                     {
-                    new Claim(ClaimTypes.Name, userId)
+                        new Claim(TYPE, userId)
                     }),
                     Expires = DateTime.UtcNow.AddHours(expiredToken),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
